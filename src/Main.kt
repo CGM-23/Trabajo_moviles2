@@ -19,7 +19,7 @@ fun main() {
         }
 
         if (opcion != 1 && opcion != 2) {
-            println("Opción invalida. Por favor, intente nuevamente.")
+            println("Opcion invalida. Por favor, intente nuevamente.")
             continue
         }
         print("Ingrese saldo inicial: ")
@@ -35,33 +35,52 @@ fun main() {
 
         var realizarOperaciones = true
         while (realizarOperaciones) {
+            val activa = cuenta.estaActiva()
             println("----------------------------")
             println("Seleccione una operacion:")
-            println("1. Consignar")
-            println("2. Retirar")
-            println("3. Generar extracto mensual")
-            println("4. Imprimir estado de la cuenta")
-            println("5. Salir al menú principal")
+            if (activa) {
+                println("1. Consignar")
+                println("2. Retirar")
+                println("3. Generar extracto mensual")
+                println("4. Imprimir estado de la cuenta")
+                println("5. Salir al menú principal")
+            } else {
+                println("Cuenta inactiva al ser menor a 10000")
+                println("1. Imprimir estado de la cuenta")
+                println("2. Salir al menu principal")
+            }
             print("Opcion: ")
+            val opcionOperacion = sc.nextInt()
 
-            when (sc.nextInt()) {
-                1 -> {
-                    print("Digite cantidad a consignar: ")
-                    val cantidad = sc.nextFloat()
-                    cuenta.consignar(cantidad)
+            if (activa) {
+                when (opcionOperacion) {
+                    1 -> {
+                        print("Digite cantidad a consignar: ")
+                        val cantidad = sc.nextFloat()
+                        cuenta.consignar(cantidad)
+                    }
+                    2 -> {
+                        print("Digite cantidad a retirar: ")
+                        val cantidad = sc.nextFloat()
+                        cuenta.retirar(cantidad)
+                    }
+                    3 -> cuenta.extractoMensual()
+                    4 -> cuenta.imprimir()
+                    5 -> {
+                        realizarOperaciones = false
+                        println("Volviendo al menu principal...")
+                    }
+                    else -> println("Opcion invalida. Intente nuevamente")
                 }
-                2 -> {
-                    print("Digite cantidad a retirar: ")
-                    val cantidad = sc.nextFloat()
-                    cuenta.retirar(cantidad)
+            } else {
+                when (opcionOperacion) {
+                    1 ->  cuenta.imprimir()
+                    2 -> {
+                        realizarOperaciones = false
+                        println("Volviendo al menu principal...")
+                    }
+                    else -> println("Opcion invalida. Intente nuevamente")
                 }
-                3 -> cuenta.extractoMensual()
-                4 -> cuenta.imprimir()
-                5 -> {
-                    realizarOperaciones = false
-                    println("Volviendo al menu principal...")
-                }
-                else -> println("Opción invalida. Intente nuevamente.")
             }
         }
     }
