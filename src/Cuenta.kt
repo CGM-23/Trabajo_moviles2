@@ -1,4 +1,3 @@
-
 open class Cuenta(
     protected var saldo: Float,
     protected var tasaAnual: Float
@@ -38,4 +37,7 @@ open class Cuenta(
         println("Tasa anual: "+tasaAnual+"%")
         println("Comisión mensual: "+comisionMensual)
         }
+     open fun estaActiva(): Boolean {
+        return true
+    }
 }
