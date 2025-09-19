@@ -6,7 +6,7 @@
 
 ---
 
-### 👤 Integrantes
+###  Integrantes
 * **Nombre:** Claudio Camilo Gonzales Mendieta
 * **Código:** `22200020`
 * **Nombre:** Jhair Roussell Melendez Blas
