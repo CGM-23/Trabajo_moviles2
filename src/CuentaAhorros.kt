@@ -5,7 +5,7 @@ class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
         if (activa) {
             super.consignar(cantidad)
         } else {
-            println("Cuenta inactiva, no se puede consignar")
+            println("No se puede consignar porque su cuenta inactiva")
         }
     }
 
@@ -13,7 +13,7 @@ class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
         if (activa) {
             super.retirar(cantidad)
         } else {
-            println("⚠ Cuenta inactiva, no se puede retirar")
+            println("No se puede retirar porque su cuenta está inactiva")
         }
     }
 
@@ -27,7 +27,7 @@ class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
     }
 
     override fun imprimir() {
-        println("------ Cuenta de Ahorros ------")
+        println("/////////////////Cuenta de Ahorros\\\\\\\\\\\\\\\\\")
         println("Saldo: " + saldo)
         println("Comisión mensual: " + comisionMensual)
         println("Transacciones: " numeroConsignaciones + numeroRetiros)
