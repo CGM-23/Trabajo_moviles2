@@ -14,7 +14,7 @@
 
 ---
 
-### 📂 Descripción del Programa
+###  Descripción del Programa
 
 Este repositorio contiene un programa que simula la gestión de cuentas bancarias, desarrollado en **Kotlin** para el curso de Desarrollo de Sistemas Móviles. El proyecto aplica los principios de la **Programación Orientada a Objetos** para modelar el comportamiento de diferentes tipos de cuentas.
 
@@ -69,7 +69,7 @@ A continuación, se muestran algunas pruebas que demuestran el funcionamiento de
   <img src="./ImagenesParaReadme/5.jpg" alt="Sobregiro - Extracto Final">
 </div>
   
-### 🚀 Cómo se Usa
+###  Cómo se Usa
 
 Para ejecutar este programa, necesitarás tener **IntelliJ IDEA** instalado en tu computadora.
 
@@ -81,6 +81,6 @@ Para ejecutar este programa, necesitarás tener **IntelliJ IDEA** instalado en t
 2.  **Abrir en IntelliJ IDEA**
     * Abre el programa y selecciona `File > Open...` y elige la carpeta del proyecto que acabas de clonar.
 
-### 🛠️ Tecnología Utilizada
+###  Tecnología Utilizada
 * **Lenguaje:** Kotlin
 * **Entorno de Desarrollo:** IntelliJ IDEA Community Edition
