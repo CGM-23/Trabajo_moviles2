@@ -2,7 +2,7 @@
   <h1>Sistema de Gestión Bancaria en Kotlin</h1>
 </div>
 
-![Portada del Proyecto](./Portada.png)
+![Portada del Proyecto](./ImagenesParaReadme/Portada.jpg)
 
 ---
 
@@ -35,12 +35,40 @@ El sistema se estructura en las siguientes clases:
 El programa presenta un menú en la consola que se adapta según el estado de la cuenta de ahorros. Si el saldo baja de S/. 10,000, la cuenta se vuelve inactiva y algunas opciones se restringen, si es mayor a S/.10,000 se habilitan todas las funciones.
 
 
-Pruebas de funcionalidad:
-- Menú principal:
-- Opción uno que es ingresar saldo inicial, la tasa anualhaces una consugnacion consultas tu saldo y generas extracto mensual:
-- ahora en este ejemplo se creó una Cuenta Corriente con saldo inicial de 5,000 y tasa anual de 12%. Al retirar 7,000, el saldo quedó en 0 y se generó un sobregiro de 2,000. Luego, al consignar 3,000, primero se cubrió el sobregiro y el saldo pasó a 1,000. Al generar el extracto mensual, se aplicó el interés correspondiente (1% del saldo), quedando un saldo final de 1,010, sin sobregiro:
+#### Pruebas de Funcionalidad
 
+A continuación, se muestran algunas pruebas que demuestran el funcionamiento del programa:
 
+* **Menú Principal y Selección de Cuenta:**
+    Al iniciar, el programa despliega un menú principal donde el usuario puede seleccionar el tipo de cuenta que desea gestionar o salir del sistema.
+
+    <div align="center">
+  <img src="./ImagenesParaReadme/1.jpg" alt="1">
+    </div>
+
+* **Creación y Operaciones en Cuenta de Ahorros:**
+    Esta prueba muestra el flujo completo: creación de una cuenta con su saldo inicial y tasa anual, seguida de una consignación, la consulta del saldo actualizado y la generación del extracto mensual.
+
+    <div align="center">
+  <img src="./ImagenesParaReadme/2.jpg" alt="1">
+    </div>
+    <div align="center">
+  <img src="./ImagenesParaReadme/6.jpg" alt="1">
+    </div>
+
+* **Prueba de Sobregiro en Cuenta Corriente:**
+    Este ejemplo demuestra la capacidad de sobregiro. Se inicia con una cuenta de S/. 5,000 y se intenta retirar S/. 7,000, lo que resulta en un saldo de S/. 0 y un sobregiro de S/. 2,000. Luego, una consignación de S/. 3,000 paga el sobregiro y deja un saldo final de S/. 1,000. El extracto mensual posterior calcula los intereses sobre este nuevo saldo.
+
+<div align="center">
+  <img src="./ImagenesParaReadme/3.jpg" alt="Sobregiro - Retiro">
+</div>
+<div align="center">
+  <img src="./ImagenesParaReadme/4.jpg" alt="Sobregiro - Consignación">
+</div>
+<div align="center">
+  <img src="./ImagenesParaReadme/5.jpg" alt="Sobregiro - Extracto Final">
+</div>
+  
 ### 🚀 Cómo se Usa
 
 Para ejecutar este programa, necesitarás tener **IntelliJ IDEA** instalado en tu computadora.
