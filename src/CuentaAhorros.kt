@@ -1,3 +1,4 @@
+
 class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
     private var activa: Boolean = saldo >= 10000
 
@@ -27,10 +28,10 @@ class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
     }
 
     override fun imprimir() {
-        println("/////////////////Cuenta de Ahorros\\\\\\\\\\\\\\\\\")
+        println("_-_-_-_-_-_-_-Cuenta de Ahorros_-_-_-_-_-_-_-")
         println("Saldo: " + saldo)
         println("Comisión mensual: " + comisionMensual)
-        println("Transacciones: " numeroConsignaciones + numeroRetiros)
+        println("Transacciones: " + (numeroConsignaciones + numeroRetiros))
         println("Activa: " + activa)
     }
 }

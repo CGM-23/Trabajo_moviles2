@@ -31,8 +31,7 @@ open class Cuenta(
         calcularInteresMensual()
         println("el nuevo saldo es: "+saldo)
     }
-
-    open fun imprimir() {
+     open fun imprimir() {
         println("Saldo: "+saldo)
         println("Número de consignaciones: "+numeroConsignaciones)
         println("Número de retiros: "+numeroRetiros)
