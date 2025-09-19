@@ -1,41 +1,68 @@
-import java.util.*
+import java.util.Scanner
 
-// Programa principal interactivo
 fun main() {
     val sc = Scanner(System.`in`)
-
     println("Bienvenido al sistema bancario en Kotlin")
-    println("Seleccione el tipo de cuenta:")
-    println("1. Cuenta de Ahorros")
-    println("2. Cuenta Corriente")
-    print("Opción: ")
-    val opcion = sc.nextInt()
-
-    print("Ingrese saldo inicial: ")
-    val saldoInicial = sc.nextFloat()
-
-    print("Ingrese tasa anual (%): ")
-    val tasaAnual = sc.nextFloat()
-
-    /*val cuenta: Cuenta = if (opcion == 1) {
-        CuentaAhorros(saldoInicial, tasaAnual)
-    } else {
-        CuentaCorriente(saldoInicial, tasaAnual)
-    }*/
-
     var continuar = true
     while (continuar) {
-        println("\nSeleccione una operación:")
-        println("1. Consignar")
-        println("2. Retirar")
-        println("3. Generar extracto mensual")
-        println("4. Imprimir estado de la cuenta")
-        println("5. Salir")
-        print("Opción: ")
 
-        when (sc.nextInt()) {
+        println("Seleccione el tipo de cuenta:")
+        println("1. Cuenta de Ahorros")
+        println("2. Cuenta Corriente")
+        println("3. Salir")
+        print("Opcion: ")
+        val opcion = sc.nextInt()
 
-            else -> println(" Opción inválida")
+        if (opcion == 3) {
+            println("Gracias por usar el sistema bancario.")
+            break
+        }
+
+        if (opcion != 1 && opcion != 2) {
+            println("Opción invalida. Por favor, intente nuevamente.")
+            continue
+        }
+        print("Ingrese saldo inicial: ")
+        val saldoInicial = sc.nextFloat()
+
+        print("Ingrese tasa anual (%): ")
+        val tasaAnual = sc.nextFloat()
+        val cuenta: Cuenta = if (opcion == 1) {
+            CuentaAhorros(saldoInicial, tasaAnual)
+        } else {
+            CuentaCorriente(saldoInicial, tasaAnual)
+        }
+
+        var realizarOperaciones = true
+        while (realizarOperaciones) {
+            println("----------------------------")
+            println("Seleccione una operacion:")
+            println("1. Consignar")
+            println("2. Retirar")
+            println("3. Generar extracto mensual")
+            println("4. Imprimir estado de la cuenta")
+            println("5. Salir al menú principal")
+            print("Opcion: ")
+
+            when (sc.nextInt()) {
+                1 -> {
+                    print("Digite cantidad a consignar: ")
+                    val cantidad = sc.nextFloat()
+                    cuenta.consignar(cantidad)
+                }
+                2 -> {
+                    print("Digite cantidad a retirar: ")
+                    val cantidad = sc.nextFloat()
+                    cuenta.retirar(cantidad)
+                }
+                3 -> cuenta.extractoMensual()
+                4 -> cuenta.imprimir()
+                5 -> {
+                    realizarOperaciones = false
+                    println("Volviendo al menu principal...")
+                }
+                else -> println("Opción invalida. Intente nuevamente.")
+            }
         }
     }
 }
