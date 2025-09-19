@@ -1,5 +1,4 @@
-// --------------------
-// Clase base Cuenta
+
 open class Cuenta(
     protected var saldo: Float,
     protected var tasaAnual: Float
@@ -30,13 +29,14 @@ open class Cuenta(
     open fun extractoMensual() {
         saldo -= comisionMensual
         calcularInteresMensual()
+        println("el nuevo saldo es: "+saldo)
     }
 
     open fun imprimir() {
-        println("Saldo: $saldo")
-        println("Número de consignaciones: $numeroConsignaciones")
-        println("Número de retiros: $numeroRetiros")
-        println("Tasa anual: $tasaAnual%")
-        println("Comisión mensual: $comisionMensual")
-    }
+        println("Saldo: "+saldo)
+        println("Número de consignaciones: "+numeroConsignaciones)
+        println("Número de retiros: "+numeroRetiros)
+        println("Tasa anual: "+tasaAnual+"%")
+        println("Comisión mensual: "+comisionMensual)
+        }
 }
