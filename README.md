@@ -81,14 +81,6 @@ Para ejecutar este programa, necesitarás tener **IntelliJ IDEA** instalado en t
 2.  **Abrir en IntelliJ IDEA**
     * Abre el programa y selecciona `File > Open...` y elige la carpeta del proyecto que acabas de clonar.
 
-3.  **Ejecutar el Programa**
-    * Navega en el panel izquierdo a la carpeta `src`.
-    * Abre el archivo que contiene la función `main` (por ejemplo, `Main.kt`).
-    * Haz clic en el ícono de **Play (▶️) verde** que aparece a la izquierda de la función `main`.
-    * Selecciona la opción **"Run"** para iniciar el programa en la consola. ¡Y listo!
-
----
-
 ### 🛠️ Tecnología Utilizada
 * **Lenguaje:** Kotlin
 * **Entorno de Desarrollo:** IntelliJ IDEA Community Edition
