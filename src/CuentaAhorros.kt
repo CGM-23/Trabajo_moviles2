@@ -34,7 +34,7 @@ class CuentaAhorros(saldo: Float, tasaAnual: Float) : Cuenta(saldo, tasaAnual) {
         println("Transacciones: " + (numeroConsignaciones + numeroRetiros))
         println("Activa: " + activa)
     }
-    override  fun estaActiva(): Boolean {
-        return true
+    override fun estaActiva(): Boolean {
+    return activa
     }
 }
